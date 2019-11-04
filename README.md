@@ -2,7 +2,7 @@
 
 ```
 
-git subodule update --init
+git submodule update --init
 tools\premake5 vs2017
 
 ```
