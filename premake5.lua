@@ -21,9 +21,11 @@ project "raylib"
     links { "winmm" }
     
     filter {"Debug"}
+        buildoptions "/MDd"
         targetname ("raylib_d")
         optimize "Off"
     filter {"Release"}
+        buildoptions "/MD"
         targetname ("raylib")
         optimize "Full"
     filter{}
@@ -57,9 +59,11 @@ project "raylibMinimumVS"
     symbols "On"
 
     filter {"Debug"}
+        buildoptions "/MDd"
         targetname ("raylibMinimumVS_Debug")
         optimize "Off"
     filter {"Release"}
+        buildoptions "/MD"
         targetname ("raylibMinimumVS")
         optimize "Full"
     filter{}
