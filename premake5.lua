@@ -1,7 +1,7 @@
-workspace "raylibMinimumVS"
+workspace "raylibImGui"
     location "build"
     configurations { "Debug", "Release" }
-    startproject "raylibMinimumVS"
+    startproject "raylibImGui"
 
 architecture "x86_64"
 
@@ -33,7 +33,7 @@ project "raylib"
     -- strcopy etc
     disablewarnings { "4996"} 
 
-project "raylibMinimumVS"
+project "raylibImGui"
     kind "ConsoleApp"
     language "C++"
     targetdir "bin/"
@@ -55,6 +55,10 @@ project "raylibMinimumVS"
 
     includedirs { "libs/raylib/src/" }
     libdirs { "bin" }
+
+    -- Dear imgui
+    files { "libs/imgui/*.h", "libs/imgui/*.cpp" }
+    includedirs { "libs/imgui/" }
 
     symbols "On"
 
